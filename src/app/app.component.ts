@@ -24,7 +24,7 @@ export class AppComponent {
 
   login(userId: number) {
     this.userId = userId;
-    console.log(this.userId);
+    //console.log(this.userId);
     this.loggedIn = this.userId != -1;
   }
 

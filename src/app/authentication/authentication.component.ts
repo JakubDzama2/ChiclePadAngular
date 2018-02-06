@@ -30,7 +30,7 @@ export class AuthenticationComponent implements OnChanges {
     this.service.authenticate(this.loginData).subscribe(number => {
       this.userId = number;
       this.service.userId = number;
-      console.log(this.userId);
+      //console.log(this.userId);
       this.eventEmiter.emit(this.userId);
     },
       error => {

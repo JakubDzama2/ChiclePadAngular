@@ -18,7 +18,7 @@ export class Note {
             result = result + this.reminderTime.getDay + '.' + this.reminderTime.getMonth + '.' +
             this.reminderTime.getFullYear + ' ' + this.reminderTime.getHours + ':' + this.reminderTime.getMinutes;
         }
-        console.log(result);
+        //console.log(result);
         return result;
     }
 }
