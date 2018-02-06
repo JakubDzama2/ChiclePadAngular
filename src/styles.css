@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+.backgr {
+    background-color: #41B3A3;
+    padding: 25px;
+}
+
+#test{
+    text-align: center;
+    border: 3px solid green;
+    border-radius: 25px;
+    padding: 20px 0;
+}
+
+input {
+    background-color: #E27D60;
+    color: white;
+    border-radius: 10px;
+    padding-left: 5px;
+}
