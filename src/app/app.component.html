@@ -1,14 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
+  <h1 style="color:#eba87c">
     Welcome to {{ title }}!<br><br>
   </h1>
 <app-authentication (eventEmiter)="login($event)" *ngIf="!loggedIn"></app-authentication>
 <div *ngIf="loggedIn">
   <label>Choose entry: </label>
-  <select [(ngModel)]="selectedEntry" name="entryCombobox">
-    <option *ngFor="let entry of entries" [ngValue]="entry">{{entry}}</option>
-  </select>
+
+  <div class="form-group">
+      
+      <div class="col-xs-5 selectContainer">
+          <select class="form-control" [(ngModel)]="selectedEntry" name="entryCombobox">
+              <option *ngFor="let entry of entries" [ngValue]="entry">{{entry}}</option>
+          </select>
+      </div>
+  </div>
+
   </div>
 </div>
 <app-notes [userId]="userId" *ngIf="loggedIn && (selectedEntry == 'Notes')"></app-notes>

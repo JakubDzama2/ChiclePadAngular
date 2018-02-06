@@ -4,11 +4,22 @@
     padding: 25px;
 }
 
-#test{
+#metabubla{
     text-align: center;
-    border: 3px solid green;
-    border-radius: 25px;
+    border: 3px solid #C38D9E;
+    border-radius: 20px;
     padding: 20px 0;
+    background-color: #85dcb1;
+    margin: 5px;
+}
+
+#bubla{
+    text-align: center;
+    border: 3px solid #C38D9E;
+    border-radius: 20px;
+    padding: 20px 0;
+    background-color: #85dcb1;
+    margin: 5px;
 }
 
 input {
@@ -16,4 +27,12 @@ input {
     color: white;
     border-radius: 10px;
     padding-left: 5px;
+}
+
+label {
+    color: white
+}
+
+h1 {
+    color: #eba87c
 }

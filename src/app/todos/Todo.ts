@@ -6,12 +6,12 @@ export class Todo {
         public categories: Category[],
         public id: number,
         public description: string,
-        public deadline: {},
-        public softDeadline: {},
+        public deadline: Date,
+        public softDeadline: Date,
         public priority: number
     ) { }
 
     getColor() {
-        
+
     }
 }

@@ -28,7 +28,7 @@ export class NotesComponent implements OnInit {
         if (element.reminderTime == null) {
             result = '';
         } else {
-            console.log(element.reminderTime.getDate);
+            console.log(element.reminderTime);
             result = result + element.reminderTime.getDay + '.' + element.reminderTime.getMonth + '.' +
             element.reminderTime.getFullYear + ' ' + element.reminderTime.getHours + ':' + element.reminderTime.getMinutes;
         }

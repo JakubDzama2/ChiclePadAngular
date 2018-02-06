@@ -4,3 +4,21 @@
 <ul *ngFor="let todo of todos">
   <li>{{todo.description}} ---- {{todo.deadline.year}}</li>
 </ul>
+<div class="container">
+  
+  <div class="row justify-content-between" *ngFor="let todo of todos">
+    <div id="metabubla" class="col-5" >
+        Deadline: {{todo.deadline.dayOfMonth}}.{{todo.deadline.monthValue}}.
+        {{todo.deadline.year}} Time: {{todo.deadline.hour}}:{{todo.deadline.minute}}
+        <br>
+        Priority: {{todo.priority}}
+        <br>
+        <span *ngIf="todo.categories[0] != null">
+          Category name : {{todo.categories[0].name}}
+        </span>
+    </div>
+    <div id="bubla" class="col-5" >
+      {{todo.description}}
+    </div>
+  </div>
+</div>

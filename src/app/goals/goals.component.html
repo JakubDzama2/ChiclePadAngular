@@ -4,3 +4,14 @@
 <ul *ngFor="let goal of goals">
   <li>{{goal.description}}</li>
 </ul>
+
+<div class="row justify-content-between" *ngFor="let goal of goals">
+    <div id="metabubla" class="col-5" >
+        <span *ngIf="goal.categories[0] != null">
+          Category name : {{goal.categories[0].name}}
+        </span>
+    </div>
+    <div id="bubla" class="col-5" >
+        {{goal.description}}
+    </div>
+</div>

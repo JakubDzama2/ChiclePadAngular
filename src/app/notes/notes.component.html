@@ -2,5 +2,21 @@
   notes works!
 </p>
 <ul *ngFor="let note of notes">  
-  <li>{{note.content}} ---- {{note.stringReminderTime}}</li>
+  <li>{{note.content}}</li>
+  <li *ngIf="note.reminderTime != null">Date: {{note.reminderTime.dayOfMonth}}.{{note.reminderTime.monthValue}}.
+    {{note.reminderTime.year}} Time: {{note.reminderTime.hour}}:{{note.reminderTime.minute}}</li>
 </ul>
+
+<div class="row justify-content-between" *ngFor="let note of notes">
+    <div id="metabubla" class="col-5" *ngIf="note.reminderTime != null">
+        Reminder date: {{note.reminderTime.dayOfMonth}}.{{note.reminderTime.monthValue}}.
+        {{note.reminderTime.year}} Time: {{note.reminderTime.hour}}:{{note.reminderTime.minute}}
+        <br>
+        <span *ngIf="note.categories[0] != null">
+          Category name : {{note.categories[0].name}}
+        </span>
+    </div>
+    <div id="bubla" class="col-5" >
+        {{note.content}}
+    </div>
+</div>
