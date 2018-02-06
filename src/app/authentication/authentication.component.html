@@ -7,10 +7,11 @@
 <div>
   <br>
   <div [hidden]="validne2.valid || validne2.pristine" class="alert alert-danger">Password cannot be empty.</div>
-  <br>
+  
 </div>
 <button type="button" class="btn btn-outline-warning" (click)="loginUser()"
 [disabled]="!(validne.valid || validne.pristine) || !(validne2.valid || validne2.pristine)">Log in</button>
+<div [hidden]="!loginFailed" class="alert alert-danger" id="ez">Incorrect login data.</div>
 <!--
 <p>{{vypisLoginData}}</p>
 //-->

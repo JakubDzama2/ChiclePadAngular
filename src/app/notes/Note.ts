@@ -7,8 +7,8 @@ export class Note {
         public id: number,
         public content: string,
         public reminderTime: Date,
-        public stringReminderTime: string
     ) {  }
+<<<<<<< HEAD
 
     public reminderTimeToString(): string {
         let result: string = '';
@@ -21,4 +21,7 @@ export class Note {
         //console.log(result);
         return result;
     }
+=======
+    
+>>>>>>> 3affc7ed849e4ae06848fa7a75f0a7798e021056
 }

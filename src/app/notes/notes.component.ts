@@ -22,6 +22,7 @@ export class NotesComponent implements OnInit {
  getNotesFromService() {
     this.service.getNotes(this.userId).subscribe(notes => {
       this.notes = notes;
+<<<<<<< HEAD
       this.notes.forEach(element => {
 //        element.stringReminderTime = element.reminderTimeToString();
         let result: string = '';
@@ -35,6 +36,8 @@ export class NotesComponent implements OnInit {
         //console.log(result);
         element.stringReminderTime = result;
       });
+=======
+>>>>>>> 3affc7ed849e4ae06848fa7a75f0a7798e021056
     },
   error => {
     console.log(JSON.stringify(error));
