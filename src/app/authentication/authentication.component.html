@@ -1,13 +1,14 @@
 <div>
-  <label>email:</label>
-  <input type="text" [(ngModel)]="loginData.email" name="email" email #validne="ngModel"/>
-  <div [hidden]="validne.valid || validne.pristine" class="alert alert-danger">Not right format of email.</div>
+  <input type="text" [(ngModel)]="loginData.email" name="email" email #validne="ngModel" placeholder="E-mail"/>
+  <br>
+  <div [hidden]="validne.valid || validne.pristine" class="alert alert-danger">Incorrect format of email.</div>
 </div>
 <div>
-  <label>password:</label>
-  <input type="text" [(ngModel)]="loginData.password" name="password" required #validne2="ngModel"/>
+  <input type="password" [(ngModel)]="loginData.password" name="password" required #validne2="ngModel" placeholder="Password"/>
+  <br>
   <div [hidden]="validne2.valid || validne2.pristine" class="alert alert-danger">Password cannot be empty.</div>
+  <br>
 </div>
-<button type="button" class="btn btn-primary" (click)="loginUser()"
+<button type="button" class="btn btn-outline-warning" (click)="loginUser()"
 [disabled]="!(validne.valid || validne.pristine) || !(validne2.valid || validne2.pristine)">Log in</button>
 <p>{{vypisLoginData}}</p>
