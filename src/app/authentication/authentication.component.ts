@@ -11,7 +11,7 @@ import { error } from 'util';
 })
 export class AuthenticationComponent implements OnChanges {
 
-  private userId: number;
+  public loginFailed: boolean = false;
 
   @Output() eventEmiter: EventEmitter<number> = new EventEmitter<number>();
   
@@ -27,13 +27,13 @@ export class AuthenticationComponent implements OnChanges {
   }
 
   loginUser() {
-    this.service.authenticate(this.loginData).subscribe(number => {
-      this.userId = number;
-      this.service.userId = number;
-      console.log(this.userId);
-      this.eventEmiter.emit(this.userId);
+    this.service.authenticate(this.loginData).subscribe(userId => {
+      this.loginFailed = true;
+      this.loginFailed = userId == -1;
+      this.eventEmiter.emit(userId);
     },
       error => {
+        this.loginFailed = true;
         console.log("Problem has occured: " + JSON.stringify(error));
     })
   }
