@@ -1,10 +1,10 @@
+<input type="text" [(ngModel)]="loginData.email" name="email" email #validne="ngModel" placeholder="E-mail"/>
 <div>
-  <input type="text" [(ngModel)]="loginData.email" name="email" email #validne="ngModel" placeholder="E-mail"/>
   <br>
   <div [hidden]="validne.valid || validne.pristine" class="alert alert-danger">Incorrect format of email.</div>
 </div>
+<input type="password" [(ngModel)]="loginData.password" name="password" required #validne2="ngModel" placeholder="Password"/>
 <div>
-  <input type="password" [(ngModel)]="loginData.password" name="password" required #validne2="ngModel" placeholder="Password"/>
   <br>
   <div [hidden]="validne2.valid || validne2.pristine" class="alert alert-danger">Password cannot be empty.</div>
   <br>
