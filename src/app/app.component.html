@@ -14,3 +14,4 @@
 <app-notes [userId]="userId" *ngIf="loggedIn && (selectedEntry == 'Notes')"></app-notes>
 <app-diaries [userId]="userId" *ngIf="loggedIn && (selectedEntry == 'DiaryPages')"></app-diaries>
 <app-goals [userId]="userId" *ngIf="loggedIn && (selectedEntry == 'Goals')"></app-goals>
+<app-todos [userId]="userId" *ngIf="loggedIn && (selectedEntry == 'TODOs')"></app-todos>

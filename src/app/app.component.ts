@@ -11,7 +11,7 @@ export class AppComponent {
 
   public userId: number = -1;
   public loggedIn: boolean = false;
-  public entries: string[] = ['Notes', 'Goals', 'TODOs', 'DiaryPages', 'Categories'];
+  public entries: string[] = ['Notes', 'Goals', 'TODOs', 'DiaryPages'];
   private _selectedEntry: string = this.entries[0];
   public selectedNotes: boolean = this.selectedEntry == 'Notes';
   public selectedDiaries: boolean = this.selectedEntry == 'DiaryPages';

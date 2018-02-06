@@ -1,11 +1,17 @@
 import { Category } from "../Category";
 
-export class Goal {
+export class Todo {
     constructor (
         public entryId: number,
         public categories: Category[],
         public id: number,
         public description: string,
-        public completedGoals: any[]
+        public deadline: {},
+        public softDeadline: {},
+        public priority: number
     ) { }
+
+    getColor() {
+        
+    }
 }

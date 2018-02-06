@@ -13,6 +13,8 @@ import { DiariesComponent } from './diaries/diaries.component';
 import { DiariesService } from './diaries/diaries.service';
 import { GoalsComponent } from './goals/goals.component';
 import { GoalsService } from './goals/goals.service';
+import { TodosComponent } from './todos/todos.component';
+import { TodosService } from './todos/todos.service';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { GoalsService } from './goals/goals.service';
     AuthenticationComponent,
     NotesComponent,
     DiariesComponent,
-    GoalsComponent
+    GoalsComponent,
+    TodosComponent
   ],
   imports: [
     HttpModule,
@@ -29,7 +32,7 @@ import { GoalsService } from './goals/goals.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthenticationService, NotesService, DiariesService, GoalsService],
+  providers: [AuthenticationService, NotesService, DiariesService, GoalsService, TodosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
