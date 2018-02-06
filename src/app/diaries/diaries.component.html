@@ -1,9 +1,11 @@
+<!--
 <p>
   diaries works!
 </p>
 <ul *ngFor="let diary of diaries">
   <li>{{diary.text}}</li>
 </ul>
+//-->
 
 <div class="row justify-content-between" *ngFor="let diary of diaries">
     <div id="metabubla" class="col-5" *ngIf="diary.recordedDay != null">

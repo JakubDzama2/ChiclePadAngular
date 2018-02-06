@@ -4,6 +4,7 @@
     Welcome to {{ title }}!<br><br>
   </h1>
 <app-authentication (eventEmiter)="login($event)" *ngIf="!loggedIn"></app-authentication>
+<button id="lout" type="button" class="btn btn-outline-warning" (click)="logoutUser()" *ngIf="loggedIn">Log out</button>
 <div *ngIf="loggedIn">
   <label>Choose entry: </label>
 

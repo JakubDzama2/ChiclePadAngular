@@ -13,8 +13,6 @@ export class AppComponent {
   public loggedIn: boolean = false;
   public entries: string[] = ['Notes', 'Goals', 'TODOs', 'DiaryPages'];
   private _selectedEntry: string = this.entries[0];
-  public selectedNotes: boolean = this.selectedEntry == 'Notes';
-  public selectedDiaries: boolean = this.selectedEntry == 'DiaryPages';
 
   get selectedEntry(): string {
     return this._selectedEntry;
@@ -28,5 +26,11 @@ export class AppComponent {
     this.userId = userId;
     console.log(this.userId);
     this.loggedIn = this.userId != -1;
+  }
+
+  logoutUser() {
+    this.userId = -1;
+    this.loggedIn = false;
+    this._selectedEntry = this.entries[0];
   }
 }

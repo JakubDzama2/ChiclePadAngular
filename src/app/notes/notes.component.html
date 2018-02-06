@@ -1,3 +1,4 @@
+<!--
 <p>
   notes works!
 </p>
@@ -6,6 +7,7 @@
   <li *ngIf="note.reminderTime != null">Date: {{note.reminderTime.dayOfMonth}}.{{note.reminderTime.monthValue}}.
     {{note.reminderTime.year}} Time: {{note.reminderTime.hour}}:{{note.reminderTime.minute}}</li>
 </ul>
+//-->
 
 <div class="row justify-content-between" *ngFor="let note of notes">
     <div id="metabubla" class="col-5" *ngIf="note.reminderTime != null">
